@@ -25,6 +25,7 @@
   "devDependencies": {
     "mocha": "~1.8.1",
     "blanket": "~1.0.6",
-    "travis-cov": "~0.2.4"
+    "travis-cov": "~0.2.4",
+    "complexity-report": "~0.9.1"
   }
 }

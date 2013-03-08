@@ -21,4 +21,8 @@ test-cov-html:
 	@NODE_ENV=test ./node_modules/.bin/mocha --require blanket $(MOCHA_OPTS) --reporter html-cov > coverage.html
 	open coverage.html
 
+# Shows a complexity report of this JavaScript code within the lib directory.
+complexity:
+	./node_modules/.bin/cr lib
+
 .PHONY: test test-cov-html
