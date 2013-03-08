@@ -22,8 +22,6 @@
   ],
   "author": "jabclab",
   "license": "MIT",
-  "readmeFilename": "README.md",
-  "gitHead": "4b5a548573a0d06120187eab1df70f8330bbb9e6",
   "devDependencies": {
     "mocha": "~1.8.1",
     "blanket": "~1.0.6",
