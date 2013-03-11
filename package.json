@@ -2,11 +2,11 @@
   "name": "circle-server",
   "version": "0.0.0",
   "description": "Server for Circle CI testing",
-  "main": "index.js",
+  "main": "index",
   "scripts": {
     "test": "make test",
     "blanket": {
-      "pattern": ""
+      "pattern": "//^((?!\/node_modules\/)(?!\/test\/).)*$/ig"
     },
     "travis-cov": {
       "threshold": 100
@@ -26,6 +26,7 @@
     "mocha": "~1.8.1",
     "blanket": "~1.0.6",
     "travis-cov": "~0.2.4",
-    "complexity-report": "~0.9.1"
+    "complexity-report": "~0.9.1",
+    "sinon": "~1.6.0"
   }
 }
