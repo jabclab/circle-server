@@ -1,5 +1,7 @@
 var person = new require('../lib/core').Person;
 
+const errRegEx = /^(\w|\s)+$/;
+
 describe('Person', function() {
 	describe('#getName()', function() {
 		it('should return "Jake" if odd number passed in', function() {
@@ -14,8 +16,26 @@ describe('Person', function() {
 		});
 	});
 	describe('#save()', function() {
-		it('should save the name under a key of name', function() {
+		it('should throw an error if specified person to save is not an object', function() {
+			var callback = sinon.spy();
 
+			person.save(function() {}, callback);
+
+			callback.should.have.been.calledWithMatch(errRegEx);
+		});
+		it('should call callback with an error if object to save does not contain a `name` property', function() {
+			var callback = sinon.spy();
+
+			person.save({}, callback);
+
+			callback.should.have.been.calledWithMatch(errRegEx);
+		});
+		it('should not throw an error if object is passed and contains a `name` property', function() {
+			var callback = sinon.spy();
+
+			person.save({ name: 'Jake Clarkson' }, callback);
+
+			callback.should.have.been.calledWith(null);
 		});
 	});
 });
