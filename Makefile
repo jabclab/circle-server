@@ -1,8 +1,9 @@
 # Makefile for circle-server. Inspiration taken from https://github.com/spumko/hapi/blob/master/Makefile.
 
 # We always want mocha test runs to include sub directories. Mocha will, by default, run tests within
-# test/ or test.js. 
-MOCHA_OPTS = --recursive
+# test/ or test.js. We always want to include a common test fixture file to avoid boilerplate code
+# in every test file.
+MOCHA_OPTS = --recursive --require test/common
 
 # By default use the dot reporter. For more see http://visionmedia.github.com/mocha/#reporters.
 REPORTER = dot
