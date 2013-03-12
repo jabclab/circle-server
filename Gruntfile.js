@@ -85,9 +85,17 @@ module.exports = function(grunt) {
 		},
 		// https://npmjs.org/package/grunt-docco
 		docco: {
-			src: libFilePath,
-			options: {
-				output: 'docs/'
+			lib: {
+				src: [libFilePath],
+				options: {
+					output: 'docs/lib/'
+				}
+			},
+			grunt: {
+				src: ['Gruntfile.js'],
+				options: {
+					output: 'docs/'
+				}
 			}
 		}
 	});
