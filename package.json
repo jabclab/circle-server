@@ -4,9 +4,9 @@
   "description": "Server for Circle CI testing",
   "main": "index",
   "scripts": {
-    "test": "make test",
+    "test": "grunt test",
     "blanket": {
-      "pattern": "//^((?!/node_modules/)(?!/test/).)*$/ig"
+      "pattern": "//^((?!/node_modules/)(?!/docs/)(?!/test/).)*$/ig"
     },
     "travis-cov": {
       "threshold": 100
@@ -29,7 +29,14 @@
     "complexity-report": "~0.9.1",
     "sinon": "~1.6.0",
     "chai": "~1.5.0",
-    "sinon-chai": "~2.3.1"
+    "sinon-chai": "~2.3.1",
+    "grunt": "~0.4.0",
+    "grunt-env": "~0.2.1",
+    "grunt-complexity": "~0.1.0",
+    "grunt-simple-mocha": "~0.3.2",
+    "grunt-blanket": "0.0.1",
+    "grunt-contrib-jshint": "~0.2.0",
+    "grunt-docco": "~0.2.0"
   },
   "dependencies": {
     "mongoskin": "~0.5.0"
