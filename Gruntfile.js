@@ -15,7 +15,7 @@ module.exports = function(grunt) {
 		simplemocha: {
 			options: {
 				require: ['test/common', 'blanket'],
-				reporter: 'dot'
+				reporter: 'spec'
 			},
 			// Simply run the unit tests
 			unit: {
