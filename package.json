@@ -6,7 +6,10 @@
   "scripts": {
     "test": "grunt test",
     "blanket": {
-      "pattern": "//^((?!/node_modules/)(?!/docs/)(?!/test/).)*$/ig"
+      "pattern": "//^((?!/node_modules/)(?!/docs/)(?!/test/).)*$/ig",
+      "data-cover-flags": {
+        "branchTracking": true
+      }
     },
     "travis-cov": {
       "threshold": 100
