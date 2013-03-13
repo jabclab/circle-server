@@ -17,4 +17,5 @@ node_modules
 coverage.html
 docs
 
-circle-server.sublime-*
+# Don't include Sublime Text config files
+*.sublime-*
